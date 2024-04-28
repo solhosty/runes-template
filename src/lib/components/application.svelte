@@ -1,0 +1,16 @@
+<script>
+	let { animal_hair = $bindable(false), odor = $bindable(false) } = $props();
+</script>
+
+<div class="flex flex-col max-w-xs space-y-2">
+	<label for="animal_hair" class="font-medium text-md"> Is there Animal Hair </label>
+	<select id="animal_hair" bind:value={animal_hair}>
+		<option value={false}> No </option>
+		<option value={true}> Yes </option>
+	</select>
+	<label for="odor" class="font-medium text-md"> Is there an Odor </label>
+	<select id="odor" bind:value={odor}>
+		<option value={false}> No </option>
+		<option value={true}> Yes </option>
+	</select>
+</div>
