@@ -7,10 +7,11 @@
 	// This is for exporting the component props and binding to the parent. 
 	// I am setting a fallback value of false for both animal_hair and odor.
 	// Notice how I am assigning types to my props here. 
-	let { animal_hair = $bindable<boolean>(false), odor = $bindable<boolean>(false) }: Options = $props();
+	let { animal_hair = $bindable(false), odor = $bindable(false) }: Options = $props();
 </script>
 
 <div class="flex flex-col max-w-xs space-y-2">
+	<p class="font-lg font-semibold underline"> Added Pricing </p>
 	<label for="animal_hair" class="font-medium text-md"> Is there Animal Hair </label>
 	<select id="animal_hair" bind:value={animal_hair}>
 		<option value={false}> No </option>
