@@ -9,7 +9,13 @@
 	let cost = $state<number>(basic_appointment.price);
 	let derived_cost = $derived(cost + (animal_hair ? 10 : 0) + (odor ? 5 : 0));
 
+	// This will log the value of animal_hair to the console
+	// Only on init & update. 
+	$inspect('Animal Hair Value: ', animal_hair);
+	// Same thing with derived_cost. 
 	$inspect(derived_cost);
+	// The only thing that won't update is cost since that value does not change.
+	$inspect(cost);
 </script>
 
 <section class="m-auto items-center max-w-3xl space-y-3 justify-center">

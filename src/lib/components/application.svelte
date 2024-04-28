@@ -1,5 +1,13 @@
-<script>
-	let { animal_hair = $bindable(false), odor = $bindable(false) } = $props();
+<script lang="ts">
+	// Showing type here to show correlation with prop. 
+	type Options = { 
+		animal_hair: boolean, 
+		odor: boolean 
+	};
+	// This is for exporting the component props and binding to the parent. 
+	// I am setting a fallback value of false for both animal_hair and odor.
+	// Notice how I am assigning types to my props here. 
+	let { animal_hair = $bindable<boolean>(false), odor = $bindable<boolean>(false) }: Options = $props();
 </script>
 
 <div class="flex flex-col max-w-xs space-y-2">

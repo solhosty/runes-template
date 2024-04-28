@@ -1,5 +1,6 @@
 import type { Appointment } from '$lib/types';
 
+// Keeping static const from clouding other code. 
 const basic_appointment: Appointment = {
 	name: 'Car Wash',
 	description: 'We wash your car',
