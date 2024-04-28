@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.postcss';
-	import Random from '$lib/components/basic-appointment.svelte';
+	import Random from '$lib/components/basic-appointment-card.svelte';
 	import { basic_appointment } from '$lib/consts/appointments';
 	import Application from '$lib/components/application.svelte';
 
